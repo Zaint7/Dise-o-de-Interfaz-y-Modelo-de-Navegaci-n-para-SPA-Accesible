@@ -1,0 +1,36 @@
+@startuml
+package "TechnoShop V" {
+
+  [Usuario]
+
+  [Inicio de Sesión]
+  [Catálogo]
+  [Menú Lateral]
+  [Producto]
+  [Carrito]
+  [Perfil]
+
+  [Base de Datos]
+
+  Usuario --> [Inicio de Sesión]
+  Usuario --> [Catálogo]
+  Usuario --> [Producto]
+  Usuario --> [Carrito]
+  Usuario --> [Perfil]
+
+  [Inicio de Sesión] --> [Base de Datos]
+  [Carrito] --> [Base de Datos]
+  [Perfil] --> [Base de Datos]
+
+}
+@enduml
+
+
+@startuml
+[Inicio de Sesión] --> [Catálogo]
+[Catálogo] --> [Producto]
+[Producto] --> [Carrito]
+[Catálogo] --> [Menú Lateral]
+[Catálogo] --> [Perfil]
+[Perfil] --> [Inicio de Sesión]
+@enduml
